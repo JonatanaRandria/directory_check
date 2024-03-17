@@ -11,6 +11,7 @@ def check_urls(urls):
     """
     for url in urls:
         response = requests.get(url)
+        # Print only the variable as excepted
         print('Trying: ' + url.split('/')[-1])
         if response.status_code != 404:
             checked.append(url)
