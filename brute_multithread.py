@@ -24,8 +24,10 @@ def main():
     with open("dir_list.txt", "r") as file:
         urls = ["http://127.0.0.1:5000/" + i.strip() for i in file]
 
-    # Divide the URLs into 3 groups
+    # Divide the URLs size into 3 groups
     chunk_size = len(urls) // 3
+
+    # Split the list of URLs into chunks of a specified size as chunk_size
     urls_chunks = [urls[i:i+chunk_size] for i in range(0, len(urls), chunk_size)]
 
     threads = []
