@@ -6,6 +6,7 @@ checked = []  # List to store URLs that have been checked
 def check_urls(urls):
     """
     Function to check the status of each URL in the given list.
+    if it doesn't return 404 (not found code),we retrieve it
     
     """
     for url in urls:
